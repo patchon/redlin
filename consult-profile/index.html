@@ -1,648 +1,662 @@
 <!DOCTYPE html>
-<html lang="en-us"><head>
+<html lang="en-US"><head>
   <meta charset="utf-8">
   <title>Consult Profile</title>
 
+  <!--Favicon-->
   <link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg?v=2">
-  <link rel="alternate icon" href="/images/favicons/favicon.ico?v=2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png?v=1">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png?v=1">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png?v=1">
+  <link rel="alternate icon" href="/images/favicons/favicon.ico?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png?v=1">
   <link rel="manifest" href="/images/favicons/site.webmanifest?v=1">
   <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg?v=1" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/images/favicons/browserconfig.xml?v=1">
   <meta name="theme-color" content="#a3c8a0">
 
-  
+  <!-- Trying to improve with preconnect for analytics -->
   <link rel="preconnect" href="https://www.google-analytics.com">
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://maps.googleapis.com">
 
-  <!-- mobile responsive meta -->
+  <!-- Mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Get to know Patrik">
   <meta name="author" content="Patrik Martinsson RedLin PM AB">
-  <meta name="generator" content="Hugo 0.69.0-DEV" />
 
-  <script>
-    !function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var t,o=loadCSS.relpreload={};o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},o.support()||(o.poly(),t=n.setInterval(o.poly,500),n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})),"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
-  </script>
+  <!-- Inline critical css -->
+  <style>body{line-height:1.5;font-family:roboto,sans-serif;-webkit-font-smoothing:antialiased}h1,h2,.section .section-title h4,.section .section-title h3,h3,h4,h5,h6{font-family:roboto,sans-serif;font-weight:400}h1{font-size:40px}h2,.section .section-title h4,.section .section-title h3{font-size:28px}h3{font-size:20px}h4{font-size:18px}p{color:#6b6b6b;font-size:15px;font-family:roboto,sans-serif}em{font-style:italic}.fa,.fab,.fad,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fab{font-family:"font awesome 5 brands"}.fa,.far,.fas{font-family:"font awesome 5 free"}.fa,.fas{font-weight:900}.fa-fw{text-align:center;width:1.25em}.fa-arrow-circle-left:before{content:"\f137"}.fa-briefcase:before{content:"\f0b1"}.fa-bug:before{content:"\f188"}.fa-caret-down:before{content:"\f0d7"}.fa-caret-right:before{content:"\f0da"}.fa-envelope-open-text:before{content:"\f658"}.fa-github:before{content:"\f09b"}.fa-globe-americas:before{content:"\f57d"}.fa-hands-helping:before{content:"\f4c4"}.fa-linkedin:before{content:"\f08c"}.fa-magic:before{content:"\f0d0"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-phone-square-alt:before{content:"\f87b"}.fa-redhat:before{content:"\f7bc"}.fa-search-plus:before{content:"\f00e"}.fa-stack-overflow:before{content:"\f16c"}.fa-tools:before{content:"\f7d9"}.fa-user-check:before{content:"\f4fc"}.fa-user-graduate:before{content:"\f501"}*{box-sizing:border-box;outline:none;-webkit-tap-highlight-color:transparent}html,body{display:flex;height:100%;margin:0;padding:0;flex-direction:column}a,a:focus,a:hover{text-decoration:none;color:#27191ebf;font-weight:500}ol,ul{margin:0;padding:0;list-style:none}img{border-radius:6px}#content{flex:1 0 auto}.button{-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-ms-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease;background:#517a88;border-radius:4px;color:#fff;display:inline-block;font-size:14px;font-weight:400;letter-spacing:1px;line-height:28px;padding:15px 35px;text-transform:uppercase;cursor:pointer}.button:hover{background:#6795a5;color:#fff;font-weight:400}.button--small{padding:2px 8px;font-size:12px;margin:4px 2px}.button--xsmall{text-transform:unset;padding:0 7px;font-size:12px;margin:0 0 6px 0}.button--back{align-self:center;font-size:40px;color:#517a88;font-weight:900;background:unset;padding:0}.button--back:hover{background:unset;font-weight:900;color:#6795a5}.button--input{display:none}.button--input:checked+label{background:#6b787d}@media(min-width:1025px) and (max-width:8192px){.button--xsmall{margin:0 0 13px 0}}.hamburger{padding:0;display:inline-block;cursor:pointer;transition-property:opacity,filter;transition-duration:.15s;transition-timing-function:linear;font:inherit;color:inherit;text-transform:none;background-color:transparent;border:0;margin:0;overflow:visible;outline:none;position:absolute;top:30px;right:16px;transform:scale(0.7)}.hamburger:hover{opacity:.7}.hamburger.is-active:hover{opacity:.7}.hamburger.is-active .hamburger-inner,.hamburger.is-active .hamburger-inner::before,.hamburger.is-active .hamburger-inner::after{background-color:#000}.hamburger-box{width:40px;height:24px;display:inline-block;position:relative}.hamburger-inner{display:block;top:50%;margin-top:-2px}.hamburger-inner,.hamburger-inner::before,.hamburger-inner::after{width:40px;height:4px;background-color:#000;border-radius:4px;position:absolute;transition-property:transform;transition-duration:.15s;transition-timing-function:ease}.hamburger-inner::before,.hamburger-inner::after{content:"";display:block}.hamburger-inner::before{top:-10px}.hamburger-inner::after{bottom:-10px}.hamburger--slider .hamburger-inner{top:2px}.hamburger--slider .hamburger-inner::before{top:10px;transition-property:transform,opacity;transition-timing-function:ease;transition-duration:.15s}.hamburger--slider .hamburger-inner::after{top:20px}.hamburger--slider.is-active .hamburger-inner{transform:translate3d(0,10px,0)rotate(45deg)}.hamburger--slider.is-active .hamburger-inner::before{transform:rotate(-45deg)translate3d(-5.71429px,-6px,0);opacity:0}.hamburger--slider.is-active .hamburger-inner::after{transform:translate3d(0,-20px,0)rotate(-90deg)}.hamburger-nav{display:block}@media(min-width:1025px) and (max-width:8192px){.hamburger-nav{display:none}}.main-header{display:flex;justify-content:center;padding:10px 0}.main-header .container{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;width:100%;max-width:1140px;padding:0 20px}.main-header .brand{flex-grow:0}.main-header .brand a{display:flex}.main-header .brand label{display:block}@media(min-width:0px) and (max-width:480px){.main-header .brand .logo{height:48px}}@media(min-width:481px) and (max-width:1024px){.main-header .brand .logo{height:48px}}.main-header .navigation{margin:0 -15px 0 0}@media(min-width:0px) and (max-width:480px){.main-header .navigation{margin:0 0 -15px;width:100%}.main-header .navigation ul.vertical-nav{visibility:hidden;transition:all 350ms cubic-bezier(0.17,0.04,0.03,0.94)}}@media(min-width:481px) and (max-width:1024px){.main-header .navigation{margin:0 0 -15px;width:100%}.main-header .navigation ul.vertical-nav{visibility:hidden;transition:all 350ms cubic-bezier(0.17,0.04,0.03,0.94)}}.main-header .navigation #toggle{position:absolute;visibility:hidden}@media(min-width:0px) and (max-width:480px){.main-header .navigation #toggle:checked~.vertical-nav{height:215px;visibility:visible}}@media(min-width:481px) and (max-width:1024px){.main-header .navigation #toggle:checked~.vertical-nav{height:215px;visibility:visible}}.main-header .navigation ul{display:flex;align-items:center}@media(min-width:0px) and (max-width:480px){.main-header .navigation ul{display:block;height:0}}@media(min-width:481px) and (max-width:1024px){.main-header .navigation ul{display:block;height:0}}@media(min-width:0px) and (max-width:480px){.main-header .navigation ul li{padding-top:15px}}@media(min-width:481px) and (max-width:1024px){.main-header .navigation ul li{padding-top:15px}}.main-header .navigation a{margin:0 10px;padding:0 5px;font-weight:400;font-size:14px;text-transform:uppercase}.main-header .navigation a:link,.main-header .navigation a:active,.main-header .navigation a:visited{color:#5c5c5c}.main-header .navigation a:hover,.main-header .navigation a:visited:hover{color:#000}.main-header .navigation .active:link,.main-header .navigation .active:active,.main-header .navigation .active:visited,.main-header .navigation .active:hover,.main-header .navigation .active:visited:hover{color:#a02626}.section{display:flex;justify-content:center;padding:50px 0}.section--muted{background-color:#f2f2f2}.section .container{display:flex;flex-direction:column;max-width:90%}@media(min-width:481px) and (max-width:1024px){.section .container{max-width:75%}}.section .container .image{align-items:center;display:none;margin-top:30px}.section .container .image img{width:100%}.section .container .text{display:flex;flex-flow:column}.section .section-title h2,.section .section-title h4,.section .section-title h3{margin:0;color:#40484f;font-size:26px;font-weight:300;line-height:1.1}.section .section-title h2 u,.section .section-title h4 u,.section .section-title h3 u{text-decoration:none;border-bottom:solid 2px #40484f}.section .section-title h3{color:#6b6b6b;font-size:16px}.section .section-title h4{color:#6b6b6b;font-size:14px}.section p{font-weight:300;margin:0 0 10px;padding-top:20px;font-size:15px;line-height:28px;letter-spacing:0}section:nth-child(3).section .container .image{display:flex}@media(min-width:481px) and (max-width:1024px){section:nth-child(3).section .container .image{display:none}}@media(min-width:1025px) and (max-width:8192px){.section{padding:100px 0}.section .container{flex-direction:row;max-width:1140px}.section .container .image{display:flex;margin-top:0}.section .container .image img{width:auto}.section .container .text:first-child,.section .container .image:first-child{padding-right:100px}.section .section-title h2,.section .section-title h3,.section .section-title h4{font-size:40px}}@media(min-width:481px) and (max-width:1024px){.section .text,.section .image{padding:0 20px}}@media(min-width:1025px) and (max-width:8192px){.section .text,.section .image{padding:0 20px}}.banner{align-items:center;background-position:52% 0;background-repeat:no-repeat;background-size:cover;color:#fff;display:flex;flex-direction:column;height:84.5vh;justify-content:center;min-height:400px;padding:0 20px;position:relative}@media(min-width:481px) and (max-width:1024px){.banner{height:40vh}}.banner:before{content:'';height:100%;left:0;position:absolute;top:0;width:100%}.banner.opacity-8:before{background:rgba(29,25,44,.8)}.banner.opacity-7:before{background:rgba(29,25,44,.7)}.banner.opacity-6:before{background:rgba(29,25,44,.6)}.banner.opacity-5:before{background:rgba(29,25,44,.5)}.banner.opacity-4:before{background:rgba(29,25,44,.4)}.banner.opacity-3:before{background:rgba(29,25,44,.3)}.banner .container-text{margin:auto;padding:0 20px;position:relative;text-align:center}.banner .container-button{margin-bottom:auto;margin-top:-20px;position:relative}.banner h1{font-size:32px;font-weight:100;letter-spacing:6px;line-height:1.2;margin:0;padding-bottom:20px;text-transform:uppercase;text-align:center;overflow-wrap:break-word}.banner h1 .red{color:#cd5c5c}.banner p{color:#fff;font-size:16px;font-weight:300;line-height:2;margin:0;padding:0 30px}.banner.pages{height:unset;min-height:unset}.banner.pages .block{padding:100px 0;position:relative}.banner.pages h1{color:#fff;padding-bottom:10px;font-size:32px;letter-spacing:3px}.banner.pages p{color:#fff;margin-bottom:0;font-weight:400;letter-spacing:2px;text-align:center;line-height:1.5}@media(min-width:1025px) and (max-width:8192px){.banner{height:60vh}.banner .container-text,.banner .container-button{margin:unset}.banner h1{font-size:45px}.banner p{font-size:18px}.banner.pages h1{font-size:45px}}.footer{flex-shrink:0;text-align:center;background-color:#f2f2f2}.footer p{font-size:13px;line-height:25px}</style>
 
-  <!-- plugins -->
+  <!-- Page Stylesheet -->
+  <link rel="preload" href="https://www.redlin.se/scss/consult-profile.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fonts -->
+  <link rel="preload" as="font" href="/plugins/webfonts/fa/free-fa-brands-400.woff2"  type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/plugins/webfonts/fa/free-fa-regular-400.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/plugins/webfonts/fa/free-fa-solid-900.woff2"   type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/plugins/webfonts/google/roboto_100.woff2"      type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/plugins/webfonts/google/roboto_300.woff2"      type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/plugins/webfonts/google/roboto_400.woff2"      type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/plugins/webfonts/google/roboto_500.woff2"      type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/plugins/webfonts/google/roboto_700.woff2"      type="font/woff2" crossorigin>
+  <link rel="preload" as="style" href="https://www.redlin.se/scss/fonts.min.css">
+  <link rel="stylesheet" href="https://www.redlin.se/scss/fonts.min.css" media="print" onload="this.media='all'">
+</head>
+
+    
+
+    
+    
+<body id="page-consult-profile">
+  <div id="content">
   
-  <link rel="preload" href="https://www.redlin.se/plugins/bootstrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://www.redlin.se/plugins/bootstrap/bootstrap.min.css"></noscript>
-  
-  <link rel="preload" href="https://www.redlin.se/plugins/magnific-popup/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://www.redlin.se/plugins/magnific-popup/magnific-popup.css"></noscript>
-  
-  <link rel="preload" href="https://www.redlin.se/plugins/Ionicons/css/ionicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://www.redlin.se/plugins/Ionicons/css/ionicons.min.css"></noscript>
-  
-  <link rel="preload" href="https://www.redlin.se/plugins/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://www.redlin.se/plugins/slick/slick.css"></noscript>
-  
-
-  <!-- Main Stylesheet -->
-  
-  <link rel="stylesheet" href="https://www.redlin.se/scss/style.min.css" media="screen">
-
-  <!--Favicon-->
-  <link rel="shortcut icon" href="https://www.redlin.se/images/favicon.png" type="image/x-icon">
-  <link rel="icon" href="https://www.redlin.se/images/favicon.png" type="image/x-icon">
-</head><body>
-<!-- preloader start -->
-<div class="preloader">
-  
-</div>
-<!-- preloader end -->
-
-<header class="navigation fix-header-navigation-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        
-        <nav class="navbar">
-          
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">
-              <img src="https://www.redlin.se/images/logo.svg" alt="RedLin PM AB | Your Red Hat Linux Expert" class="img-responsive fix-header-logo-position">
-            </a>
-          </div>
-          
-          <div class="collapse navbar-collapse" id="navigation">
-            <ul class="nav navbar-nav navbar-right fix-navigation-menu-padding-and-margin">
-              <li><a href="https://www.redlin.se">Home</a></li>
-
-              
-              
-              <li><a href="https://www.redlin.se/our-skills">Our Skills</a></li>
-              
-              
-              
-              <li><a href="https://www.redlin.se/portfolio">Portfolio</a></li>
-              
-              
-              
-              <li><a href="https://www.redlin.se/consult-profile">Consult Profile</a></li>
-              
-              
-              
-              <li><a href="https://www.redlin.se/contact">Contact</a></li>
-              
-              
-
-              
-
-            </ul>
-          </div>
-        </nav>
+  <!-- Menu / Header -->
+  <header class="main-header">
+    <div class="container">
+      <div class="brand">
+        <a href="/">
+          <img class="logo" src="https://www.redlin.se/images/logo.svg" alt="RedLin PM AB | Your Red Hat Linux Expert">
+        </a>
       </div>
+      <div class="hamburger-nav">
+        <button class="hamburger hamburger--slider" type="button" aria-label="Menu" aria-controls="navigation" onclick='this.classList.toggle("is-active");'>
+          <label for="toggle">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </label>
+        </button>
+      </div>
+      <nav class="navigation" id="navigation">
+        <input type="checkbox" id="toggle" name="toggle" autocomplete="off">
+        <ul class="vertical-nav">
+          <li><a href="https://www.redlin.se/" >Home</a></li>
+          <li><a href="https://www.redlin.se/our-skills" >Our Skills</a></li>
+          <li><a href="https://www.redlin.se/portfolio" >Portfolio</a></li>
+          <li><a href="https://www.redlin.se/consult-profile" class="active">Consult Profile</a></li>
+          <li><a href="https://www.redlin.se/contact" >Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <!-- Head Banner -->
+<section class="banner pages opacity-6" style="background-image: url('https://www.redlin.se/images/consult-profile/header-bg.webp');">
+  <div class="block">
+    <h1>Consult Profile</h1>
+    <p>Get to know Patrik</p>
   </div>
-</header>
+</section>
 
+<section class="section first basic-info">
 
-
-
-
-
-  
-
-
-
-
-
-
-<section class="page-title page-title fix-page-title-opacity-4 bg-2" style="background-image: url('https://www.redlin.se/images/consult-profile/header-bg.webp');">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1>Consult Profile</h1>
-          <p>Get to know Patrik</p>
+    <div class="text">
+      <div class="section-title">
+        <div>
+        <h2 class="name">Patrik Martinsson</h2>
+        <h3 class="work">Linux System Administrator</h3>
+        <h4 class="location">Stockholm, Sweden</h4>
+      </div>
+      <div class="icons">
+        <div class="col first">
+          <li class="website">
+            <img class="logo" src="https://www.redlin.se/images/logo-no-text-no-borders.svg">
+            <a target="_blank" target="_blank" class="fix-pixel-perfect" href="https://www.redlin.se">www.redlin.se</a>
+          </li>
+          <li class="email">
+            <i class="fas fa-envelope-open-text"></i>
+            <a href="mailto:patrik@redlin.se">patrik@redlin.se</a>
+          </li>
+          <li class="phone">
+            <i class="fas fa-phone-square-alt"></i>
+            <a href="tel:+46 707 27 64 96">+46 707 27 64 96</a>
+          </li>
+          <li class="linkedin">
+            <i class="fab fa-linkedin"></i>
+            <a target="_blank" href="https://www.linkedin.com/in/patrikmartinsson/">LinkedIn</a>
+          </li>
+        </div>
+        <div class="col">
+          <li class="github">
+            <i class="fab fa-github"></i>
+            <a target="_blank" href="https://github.com/patchon">GitHub</a>
+          </li>
+          <li class="stackoverflow">
+            <i class="fab fa-stack-overflow"></i>
+            <a target="_blank" href="https://stackoverflow.com/users/2253454/patrik-martinsson">Stack Overflow</a>
+          </li>
+          <li class="redhat">
+            <i class="fab fa-redhat"></i>
+            <a target="_blank" href="https://rhtapps.redhat.com/certifications/badge/verify/6JKMSGM44ZMQPIIRFKGLJELAZIAEQU3CUPSQX2KSDXT6RW46LQ3XCZJWRJNV7ILTXVE4I6VB7OTCG4U5NQYTCNA62RUWOCM34WWBUYQ&#x3D;">Certified Engineer</a>
+          </li>
+          <li class="languages">
+            <i class="fas fa-globe-americas"></i>
+            <span>Swedish | English</span>
+          </li>
         </div>
       </div>
     </div>
   </div>
-</section>
-
-<div id="resume">
-  <header id="header" class="clear">
+  <div class="image me">
     <img class="picture" src="https://www.redlin.se/images/contact/patrik.webp" alt="Patrik Martinsson" />
-    <div class="middle">
-      <h1 class="name">Patrik Martinsson</h1>
-      <h2 class="label-work">Linux System Administrator</h2>
-    </div>
-
-    <span class="location">
-      <span class="city">Stockholm,</span>
-      <span class="region">Sweden</span>
-    </span>
-
-
-    <div id="contact">
-      <div class="website">
-        <img src="https://www.redlin.se/images/logo-no-text-no-borders.svg">
-        <a target="_blank" target="_blank" class="fix-pixel-perfect" href="https://www.redlin.se">www.redlin.se</a>
-      </div>
-      <div class="email">
-        <span class="far fa-envelope-open"></span>
-        <a href="mailto:patrik@redlin.se">patrik@redlin.se</a>
-      </div>
-      <div class="phone">
-        <span class="fas fa-mobile-alt"></span>
-        <a href="tel:+46 707 27 64 96">+46 707 27 64 96</a>
-      </div>
-      <div class="languages">
-        <span class="fas fa-globe-americas"></span>
-        <span>Swedish | English</span>
-      </div>
-    </div>
-
-    <div id="profiles">
-      <div class="item">
-        <div class="username">
-          <span class="fab fa-linkedin linkedin social"></span>
-          <span class="url">
-            <a target="_blank" href="https://www.linkedin.com/in/patrikmartinsson/">linkedin</a>
-          </span>
-        </div>
-      </div>
-      <div class="item">
-        <div class="username">
-          <span class="fab fa-github github social"></span>
-          <span class="url">
-            <a target="_blank" href="https://github.com/patchon">github</a>
-          </span>
-        </div>
-      </div>
-      <div class="item">
-        <div class="username">
-          <span class="fab fa-stack-overflow stack-overflow social"></span>
-          <span class="url">
-            <a target="_blank" href="https://stackoverflow.com/users/2253454/patrik-martinsson">stackoverflow</a>
-          </span>
-        </div>
-      </div>
-      <div class="item">
-        <div class="username">
-          <span class="fab fa-redhat redhat social"></span>
-          <span class="url">
-            <a target="_blank" href="https://rhtapps.redhat.com/certifications/badge/verify/6JKMSGM44ZMQPIIRFKGLJELAZIAEQU3CUPSQX2KSDXT6RW46LQ3XCZJWRJNV7ILTXVE4I6VB7OTCG4U5NQYTCNA62RUWOCM34WWBUYQ&#x3D;">redhat certified engineer</a>
-          </span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="section main-summary">
-    <section>
-      <div><p>My name is Patrik Martinsson and I'm a Linux System Administrator from Stockholm, Sweden. I'm a Linux-enthusiast, active in the community with various bug reports, patches, discussions, etc. I'm always eager to learn new things and can adapt very quickly to various kinds of situations. I’m running my own company called <a href='https://www.redlin.se'>RedLin</a>, specializing on Red Hat products.</p></div>
-    </section>
-  </section>
-
-<section class="section section-skills">
-  <header>
-    <i class="fas fa-tools" aria-hidden="true"></i>
-    <h2 class='section-title'>Skills</h2>
-  </header>
-  <section id="skills">
-    <div class="item">
-      <h3 class="name">
-        Linux
-      </h3>
-
-      <div class="level master">
-        <em>Master</em>
-        <div class="bar"></div>
-      </div>
-      <ul class="keywords">
-        <li class=red hat>red hat</li>
-        <li class=bash>bash</li>
-        <li class=gnu tools>gnu tools</li>
-        <li class=rpm packaging>rpm packaging</li>
-        <li class=docker>docker</li>
-        <li class=podman>podman</li>
-        <li class=kerberos>kerberos</li>
-        <li class=nginx>nginx</li>
-        <li class=apache>apache</li>
-      </ul>
-    </div>
-    <div class="item">
-      <h3 class="name">
-        Automation
-      </h3>
-
-      <div class="level master">
-        <em>Master</em>
-        <div class="bar"></div>
-      </div>
-      <ul class="keywords">
-        <li class=ansible>ansible</li>
-        <li class=puppet>puppet</li>
-        <li class=foreman>foreman</li>
-        <li class=ansible tower>ansible tower</li>
-        <li class=anaconda>anaconda</li>
-        <li class=kickstart>kickstart</li>
-        <li class=pxe>pxe</li>
-      </ul>
-    </div>
-    <div class="item">
-      <h3 class="name">
-        Cloud
-      </h3>
-
-      <div class="level advanced">
-        <em>Advanced</em>
-        <div class="bar"></div>
-      </div>
-      <ul class="keywords">
-        <li class=red hat director>red hat director</li>
-        <li class=openstack>openstack</li>
-        <li class=ceph>ceph</li>
-        <li class=terraform>terraform</li>
-      </ul>
-    </div>
-    <div class="item">
-      <h3 class="name">
-        API
-      </h3>
-
-      <div class="level advanced">
-        <em>Advanced</em>
-        <div class="bar"></div>
-      </div>
-      <ul class="keywords">
-        <li class=vmware vsphere>vmware vsphere</li>
-        <li class=openstack>openstack</li>
-        <li class=jira>jira</li>
-        <li class=ca servicedesk>ca servicedesk</li>
-        <li class=infoblox>infoblox</li>
-        <li class=cisco ucs>cisco ucs</li>
-        <li class=itrs op5 monitor>itrs op5 monitor</li>
-      </ul>
-    </div>
-    <div class="item">
-      <h3 class="name">
-        Programming
-      </h3>
-
-      <div class="level advanced">
-        <em>Advanced</em>
-        <div class="bar"></div>
-      </div>
-      <ul class="keywords">
-        <li class=perl>perl</li>
-        <li class=python>python</li>
-        <li class=php>php</li>
-        <li class=go>go</li>
-        <li class=c / c++>c / c++</li>
-        <li class=javascript>javascript</li>
-        <li class=regular expressions>regular expressions</li>
-      </ul>
-    </div>
-    <div class="item">
-      <h3 class="name">
-        Integration
-      </h3>
-
-      <div class="level master">
-        <em>Master</em>
-        <div class="bar"></div>
-      </div>
-      <ul class="keywords">
-        <li class=active directory>active directory</li>
-        <li class=ldap>ldap</li>
-        <li class=single sign on>single sign on</li>
-      </ul>
-    </div>
-  </section>
+  </div>
 </section>
-<section class="section section-work">
-  <header>
-    <i class="fas fa-briefcase" aria-hidden="true"></i>
-    <h2 class='section-title'>Work Experience </h2>
-  </header>
 
-  <section id="work">
-    <section class="work-item">
+<section class="section summary section--muted">
+  <div class="container">
+    <p>
+      My name is Patrik Martinsson and I'm a Linux System Administrator from Stockholm, Sweden.
+      I'm a Linux-enthusiast, active in the community with various bug reports, patches, discussions, etc.
+      I'm always eager to learn new things and can adapt very quickly to various kinds of situations.
+      I’m running my own company called <a href='https://www.redlin.se'>RedLin</a>, specializing on Red Hat products.
+      On top of that I'm also a <a href="https://rhtapps.redhat.com/certifications/badge/verify/6JKMSGM44ZMQPIIRFKGLJELAZIAEQU3CUPSQX2KSDXT6RW46LQ3XCZJWRJNV7ILTXVE4I6VB7OTCG4U5NQYTCNA62RUWOCM34WWBUYQ&#x3D;">Red Hat Certified Engineer</a>.
+    </p>
+  </div>
+</section>
 
-        <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+<section class="section skills">
+  <div class="container">
+    <header class="mainsection">
+      <i class="fas fa-tools"></i><h2 class='title'>Skills</h2>
+    </header>
+
+    <section class="list-of-skills">
+      <div class="skill">
+        <h3 class="name">
+          Linux
+        </h3>
+        <div class="level master">
+          <em>Master</em>
+          <div class="bar"></div>
+        </div>
+        <ul class="keywords">
+          <li class=red>red hat</li>
+          <li class=bash>bash</li>
+          <li class=docker>docker</li>
+          <li class=podman>podman</li>
+          <li class=gnu>gnu tools</li>
+          <li class=nginx>nginx</li>
+          <li class=apache>apache</li>
+          <li class=kerberos>kerberos</li>
+          <li class=kerberos>systemd</li>
+          <li class=rpm>rpm packaging</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3 class="name">
+          Automation
+        </h3>
+        <div class="level master">
+          <em>Master</em>
+          <div class="bar"></div>
+        </div>
+        <ul class="keywords">
+          <li class=ansible>ansible</li>
+          <li class=puppet>puppet</li>
+          <li class=foreman>foreman</li>
+          <li class=ansible tower>ansible tower</li>
+          <li class=anaconda>anaconda</li>
+          <li class=kickstart>kickstart</li>
+          <li class=pxe>pxe</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3 class="name">
+          Cloud
+        </h3>
+        <div class="level advanced">
+          <em>Advanced</em>
+          <div class="bar"></div>
+        </div>
+        <ul class="keywords">
+          <li class=openstack>openstack</li>
+          <li class=ceph>ceph</li>
+          <li class=ceph>aws</li>
+          <li class=red hat director>red hat director</li>
+          <li class=terraform>terraform</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3 class="name">
+          Integration
+        </h3>
+        <div class="level master">
+          <em>Master</em>
+          <div class="bar"></div>
+        </div>
+        <ul class="keywords">
+          <li class=active directory>active directory</li>
+          <li class=ldap>ldap</li>
+          <li class=ldap>802.1x</li>
+          <li class=single sign on>single sign on</li>
+          <li class=ldap>pkcs11</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3 class="name">
+          Programming
+        </h3>
+        <div class="level advanced">
+          <em>Advanced</em>
+          <div class="bar"></div>
+        </div>
+        <ul class="keywords">
+          <li class=perl>perl</li>
+          <li class=python>python</li>
+          <li class=php>php</li>
+          <li class=go>go</li>
+          <li class=c / c++>c / c++</li>
+          <li class=javascript>javascript</li>
+          <li class=regular expressions>regular expressions</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3 class="name">
+          API
+        </h3>
+        <div class="level advanced">
+          <em>Advanced</em>
+          <div class="bar"></div>
+        </div>
+        <ul class="keywords">
+          <li class=openstack>openstack</li>
+          <li class=cisco ucs>cisco ucs</li>
+          <li class=vmware vsphere>vmware vsphere</li>
+          <li class=jira>jira</li>
+          <li class=ca servicedesk>ca servicedesk</li>
+          <li class=infoblox>infoblox</li>
+          <li class=itrs op5 monitor>bitbucket</li>
+          <li class=itrs op5 monitor>op5 monitor</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="section work-history">
+  <div class="container">
+    <header class="mainsection">
+      <i class="fas fa-briefcase"></i><h2 class='title'>Work Experience</h2>
+    </header>
+
+    <section class="list-of-work">
+      <div class="work">
+        <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked"/>
         <label for="work-item-0"></label>
 
-      <header>
-        <div class="position">Linux System Administrator and Founder</div>
-        <div class="company">RedLin PM AB</div>
-        <div class="date">
-          <span class="startDate">May 2020</span>
-          <span class="endDate"> - Current</span>
-        </div>
-      </header>
+        <header class="subsection">
+          <div class="position">Linux System Administrator</div>
+          <div class="company pipe">RedLin PM AB</div>
+          <div class="date">
+            <span class="startDate">May 2020</span>
+            <span class="endDate"> - Current</span>
+          </div>
+          <div class="website">
+            <a target="_blank" href="https://www.redlin.se">https://www.redlin.se</a>
+          </div>
+        </header>
 
-      <span class="website">
-        <a target="_blank" href="https://www.redlin.se">https://www.redlin.se</a>
-      </span>
-      <ul class="keywords">
-        <li>red hat</li>
-        <li>consulting</li>
-        <li>linux system administrator</li>
-        <li>automation</li>
-        <li>standardize</li>
-        <li>development</li>
-      </ul>
-      <div class="item" id="work-item">
-        <div class="summary">
-          <p><p>RedLin is created and owned by Patrik Martinsson who has been in love with Red Hat for over a decade. We help our customers to automate, standardize and develop their infrastructure with the help of Linux and Red Hat products. At RedLin we can take on roles such as,</p></p>
-        </div>
-        <ul class="highlights">
-              <li><p>Site Reliability Engineer</p></li>
-              <li><p>Linux System Administrator</p></li>
-              <li><p>DevOps Engineer</p></li>
+        <ul class="keywords">
+          <li>red hat</li>
+          <li>consulting</li>
+          <li>automation</li>
+          <li>development</li>
+          <li>linux system administrator</li>
+          <li>standardize</li>
         </ul>
-        <div class="summary">
-          <p><p>At RedLin we are used to tools such as Ansible and Puppet for automation and consistency. We also recognize the importance of having continuous deployment pipelines in place, not only for things like products and container images, but also for other parts of the infrastructure. Together with you, we want to build an fully automated, daily patched, high availability infrastructure.</p><p>We simply provide expertise and tailored solutions primarily built on Linux and Red Hat products.</p></p>
+
+        <div class="description">
+          <div class="summary">
+            <p>RedLin is founded and owned by Patrik Martinsson who has been in love with Red Hat for over a decade.
+            We help our customers to automate, standardize and develop their infrastructure with the help of Linux and Red Hat products.
+            At RedLin we can take on roles such as,</p>
+          </div>
+
+          <ul class="highlights">
+            <li><p>Site Reliability Engineer</p></li>
+            <li><p>Linux System Administrator</p></li>
+            <li><p>DevOps Engineer</p></li>
+          </ul>
+
+          <div class="summary">
+            <p>At RedLin we are used to tools such as Ansible and Puppet for automation and consistency.
+               We also recognize the importance of having continuous deployment pipelines in place,
+               not only for things like products and container images, but also for other parts of the infrastructure.
+               Together with you, we want to build an fully automated, daily patched, high availability infrastructure.
+            </p>
+            <p class="spacing">We simply provide expertise and tailored solutions primarily built on Linux and Red Hat products.</p>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="work-item">
 
-        <input id="work-item-1" type="checkbox" class="toggle-item" />
+      <div class="work" id="work-item-1-print">
+        <input id="work-item-1" type="checkbox" class="toggle-item"/>
         <label for="work-item-1"></label>
 
-      <header>
-        <div class="position">Linux System Administrator</div>
-        <div class="company">TriOptima</div>
-        <div class="date">
-          <span class="startDate">April 2016</span>
-          <span class="endDate"> - November 2019</span>
-        </div>
-      </header>
+        <header class="subsection">
+          <div class="position">Linux System Administrator</div>
+          <div class="company pipe">TriOptima</div>
+          <div class="date">
+            <span class="startDate">April 2016</span>
+            <span class="endDate"> - November 2019</span>
+          </div>
+          <div class="website">
+            <a target="_blank" href="https://www.trioptima.com">https://www.trioptima.com</a>
+          </div>
+        </header>
 
-      <span class="website">
-        <a target="_blank" href="https://www.trioptima.com">https://www.trioptima.com</a>
-      </span>
-      <ul class="keywords">
-        <li>openstack</li>
-        <li>ceph</li>
-        <li>red hat director</li>
-        <li>ansible</li>
-        <li>cloud</li>
-        <li>terraform</li>
-        <li>kerberos</li>
-      </ul>
-      <div class="item" id="work-item">
-        <div class="summary">
-          <p><p>My main responsibilities at TriOptima has been the installation, configuration and design of their Openstack and Ceph platform. The setup spans over three data centers and is based on Red Hat Openstack Platform 13 and Red Hat Ceph Storage 3. The design includes everything from different availability zones, storage pools (both local and stretched between multiple data centers), and involves roughly 50 nodes. The deployment of OpenStack is done through the Red Hat Director, while Ceph is being deployed using the Ceph Ansible Playbook. We have chosen this configuration to get an environment that scales and fulfills our internal customers requirements. </p><p> During the implementation I’ve encountered quite a few bugs in various components (neutron, octavia, heat-templates, networkmanager) which have actively been reported upstream (also monkey patched a few things locally to work around numerous deployment issues).</p><p> On top of that I’ve also built our own internal portal where the users can create, delete and manage access to their projects. Authentication to the portal, and to the cloud, is done via Kerberos (Active Directory) and supports Single Sign On. </p></p>
+        <ul class="keywords">
+          <li>openstack</li>
+          <li>ceph</li>
+          <li>red hat director</li>
+          <li>ansible</li>
+          <li>cloud</li>
+          <li>terraform</li>
+          <li>kerberos</li>
+        </ul>
+
+        <div class="description">
+          <div class="summary">
+            <p>
+              My main responsibilities at TriOptima has been the installation, configuration and design of their Openstack and Ceph platform.
+              The setup spans over three data centers and is based on Red Hat Openstack Platform 13 and Red Hat Ceph Storage 3.
+              The design includes everything from different availability zones, storage pools (both local and stretched between multiple data centers),
+              and involves roughly 50 nodes. The deployment of OpenStack is done through the Red Hat Director, while Ceph is being deployed using the
+              Ceph Ansible Playbook. We have chosen this configuration to get an environment that scales and fulfills our internal customers requirements.
+            </p>
+            <p class="spacing">
+              During the implementation I’ve encountered quite a few bugs in various components (neutron, octavia, heat-templates, networkmanager) which
+              have actively been reported upstream (also monkey patched a few things locally to work around numerous deployment issues).
+              On top of that I’ve also built our own internal portal where the users can create, delete and manage access to their projects.
+              Authentication to the portal, and to the cloud, is done via Kerberos (Active Directory) and supports Single Sign On.
+            </p>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="work-item">
 
-        <input id="work-item-2" type="checkbox" class="toggle-item" />
+      <div class="work">
+        <input id="work-item-2" type="checkbox" class="toggle-item"/>
         <label for="work-item-2"></label>
 
-      <header>
-        <div class="position">Linux System Administrator</div>
-        <div class="company">SMHI</div>
-        <div class="date">
-          <span class="startDate">May 2008</span>
-          <span class="endDate"> - January 2016</span>
-        </div>
-      </header>
+        <header class="subsection">
+          <div class="position">Linux System Administrator</div>
+          <div class="company pipe">SMHI</div>
+          <div class="date">
+            <span class="startDate">May 2008</span>
+            <span class="endDate"> - January 2016</span>
+          </div>
+          <div class="website">
+            <a target="_blank" href="https://www.smhi.se">https://www.smhi.se</a>
+          </div>
+        </header>
 
-      <span class="website">
-        <a target="_blank" href="https://www.smhi.se">https://www.smhi.se</a>
-      </span>
-      <ul class="keywords">
-        <li>puppet</li>
-        <li>foreman</li>
-        <li>cisco ucs</li>
-        <li>itrs op5 monitor</li>
-        <li>automation</li>
-        <li>vmware</li>
-        <li>infoblox</li>
-        <li>nfs</li>
-      </ul>
-      <div class="item" id="work-item">
-        <div class="summary">
-          <p><p>My day to day-tasks consisted of managing ~ 1000 Red Hat Enterprise Servers and ~ 150 Red Hat Enterprise Clients. Usually it involved making sure everything was up running and that the setups were consistent. This was essentially done by Puppet, Ansible and various automation-scripts (preferable in bash, perl or python). I've done a lot of scripting to various parts of the infrastructure, this includes Cisco UCS, VMware, Infoblox, HP iLO, Foreman, Puppet, ITRS OP5 Monitor, Cacti, Various CA technologies products, etc. As previously mentioned, my job often consisted of setting up, configuring, re-configuring, purging servers, so scripting was quite essential. I've been a key-player in SMHI's attempt to standardize their Linux Platforms (both for Servers and Clients). The goal was to make sure that every Linux Server and Client would be centrally managed and properly configured to SMHI's infrastructure and policies, that includes,</p></p>
-        </div>
-        <ul class="highlights">
-              <li><p>Authentication (Active Directory, Kerberos, Smart Card, PKCS11, Cisco Anyconnect)</p></li>
-              <li><p>File shares (NFSv3, NFSv4 + Kerberos, automount)</p></li>
-              <li><p>Wireless 802.1x (Certificate enrollment through SCEP)</p></li>
-              <li><p>Fully automated installations and configurations for both Servers and Clients (available for customers through self-service-portals)</p></li>
+        <ul class="keywords">
+          <li>vmware</li>
+          <li>cisco ucs</li>
+          <li>op5 monitor</li>
+          <li>automation</li>
+          <li>infoblox</li>
+          <li>puppet</li>
+          <li>foreman</li>
+          <li>nfs</li>
         </ul>
+
+        <div class="description">
+          <div class="summary">
+            <p>
+              My day to day-tasks consisted of managing Red Hat Enterprise Servers and Red Hat Enterprise Clients.
+              Usually it involved making sure everything was up running and that the setups were consistent. This was essentially done by Puppet,
+              Ansible and various automation-scripts (preferable in bash, perl or python).
+            </p>
+            <p class="spacing">
+              I've been a key-player in SMHI's attempt to standardize their Linux Platforms (both for Servers and Clients). The goal was to make sure that
+              every Linux Server and Client would be centrally managed and properly configured to SMHI's infrastructure and policies, that includes,
+            </p>
+          </div>
+
+          <ul class="highlights">
+            <li><p>Authentication (Active Directory, Kerberos, Smart Card, PKCS11, Cisco Anyconnect)</p></li>
+            <li><p>File shares (NFSv3, NFSv4 + Kerberos, automount)</p></li>
+            <li><p>Wireless 802.1x (Certificate enrollment through SCEP)</p></li>
+            <li><p>Fully automated installations and configurations for both Servers and Clients (available for customers through self-service-portals)</p></li>
+          </ul>
+
+          <div class="summary">
+            <p>
+              I've done a lot of scripting to various parts of the infrastructure, this includes Cisco UCS, VMware, Infoblox, HP iLO, Foreman, Puppet,
+              ITRS OP5 Monitor, Cacti, Various CA technologies products, etc.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-  </section>
+  </div>
 </section>
-<section class="section section-volunteer">
-  <header>
-    <i class="fas fa-hands-helping"></i>
-    <h2 class='section-title'>Volunteer</h2>
-  </header>
-  <section id="volunteer">
-    <section class="volunteer-item">
 
-        <input id="volunteer-item-0" type="checkbox" class="toggle-item" checked="checked" />
+<section class="section volunteer">
+  <div class="container">
+    <header class="mainsection">
+      <i class="fas fa-hands-helping"></i><h2 class='title'>Volunteer</h2>
+    </header>
+
+    <section class="list-of-volunteers">
+      <div class="volunteer">
+        <input id="volunteer-item-0" type="checkbox" class="toggle-item"/>
         <label for="volunteer-item-0"></label>
+        <header class="subsection">
+          <div class="position">Linux System Administrator</div>
+          <div class="company pipe">SIDA</div>
+          <div class="date">
+            <span class="startDate">October 2013</span>
+            <span class="endDate"> - November 2013</span>
+          </div>
+          <div class="website">
+            <a target="_blank" href="https://www.sida.se">https://www.sida.se</a>
+          </div>
+        </header>
 
-      <header>
-          <div class="position">
-            Linux System Administrator
+        <ul class="keywords">
+          <li>request tracker</li>
+          <li>mediawiki</li>
+          <li>virtualization</li>
+        </ul>
+
+        <div class="description">
+          <div class="summary">
+            <p>
+              On behalf of the SIDA-organization I've been visiting the Department of Meteorological Services in Botswana two times.
+              My work there has mostly consisted of deploying Linux Servers and setting up a Request Tracker-system and a wiki. The Biggest
+              challenges with these missions has been the lack of infrastructure, internet access and the fact that everything has to be
+              done while being there, no remote work has been possible.
+            </p>
           </div>
-          <div class="organization">
-            SIDA
-          </div>
-        <div class="date">
-          <span class="startDate">
-          October 2013
-          </span>
-          <span class="endDate">
-          - November 2013
-          </span>
-        </div>
-      </header>
-      <ul class="keywords">
-        <li>request tracker</li>
-        <li>mediawiki</li>
-        <li>virtualization</li>
-      </ul>
-      <div class="item">
-        <div class="summary">
-          <p><p>On behalf of the SIDA-organization I've been visiting the Department of Meteorological Services in Botswana two times. My work there has mostly consisted of deploying Linux Servers and setting up a Request Tracker-system and a wiki. The Biggest challenges with these missions has been the lack of infrastructure, internet access and the fact that everything has to be done while being there, no remote work has been possible.</p></p>
         </div>
       </div>
     </section>
-  </section>
+  </div>
 </section>
-<section class="section section-education">
-  <header>
-    <i class="fas fa-graduation-cap"></i>
-    <h2 class='section-title title-education'>Education </h2>
-  </header>
 
-  <section id="education">
-    <section class="education-item">
-      <header>
-        <div class="header-left">
-          <div class="area">
-            Separate Courses
+
+<section class="section education">
+  <div class="container">
+    <header class="mainsection">
+      <i class="fas fa-user-graduate"></i><h2 class='title'>Education </h2>
+    </header>
+
+    <section class="list-of-educations">
+      <div class="education">
+        <input id="education-item-0" type="checkbox" class="toggle-item"/>
+        <label for="education-item-0"></label>
+
+        <header class="subsection">
+          <div class="position">Linux as a developing platform</div>
+          <div class="company pipe">Umeå University</div>
+          <div class="date">
+            <span class="startDate">2009</span>
+            <span class="endDate"> - 2010</span>
           </div>
-          <div class="institution">
-            Umeå University, Linné University
+          <div class="website">
+            <a target="_blank" href="https://www.umu.se/utbildning/kurser/linux-som-utvecklingsmiljo-1/kursplan/">https://www.umu.se/</a>
           </div>
-        </div>
-        <div class="date">
-          <span class="startDate">
-          2009
-          </span>
-          <span class="endDate">
-          - 2010
-          </span>
-        </div>
-      </header>
+        </header>
 
-
-        <ul class="education-course">
-            <li><p>Linux as a developing platform</p>
-                  <span>c</span>
-                  <span>gcc</span>
-                  <span>make</span>
-                  <span>shell</span>
-              </li>
-            <li><p>Structured Programming with C++</p>
-                  <span>object oriented c++</span>
-                  <span>classes</span>
-                  <span>boost</span>
-              </li>
+        <ul class="keywords">
+          <li>c</li>
+          <li>gcc</li>
+          <li>gdb</li>
+          <li>make</li>
+          <li>shell</li>
         </ul>
-    </section>
-    <section class="education-item">
-      <header>
-        <div class="header-left">
-          <div class="area">
-            Linux System administration
-          </div>
-          <div class="institution">
-            Jensen Education
+
+        <div class="description">
+          <div class="summary">
+            <p>
+              This course will give the student a solid understanding on how to use Linux as a Developing Platform.
+              This includes using tools such as gcc, make, gdb, ldd, git, etc. The student will also learn how to write automated tests,
+              graphical interfaces and various packaging strategies for different distributions.
+            </p>
           </div>
         </div>
-        <div class="date">
-          <span class="startDate">
-          2007
-          </span>
-          <span class="endDate">
-          - 2009
-          </span>
-        </div>
-      </header>
 
+      </div>
 
-        <ul class="education-course">
-            <li><p>Database Administration</p>
-                  <span>SQL</span>
-                  <span>relational database theory</span>
-                  <span>database modelling</span>
-                  <span>normalization</span>
-                  <span>troubleshooting</span>
-              </li>
-            <li><p>Network and computer communicationn</p>
-                  <span>inetd</span>
-                  <span>xinetd</span>
-                  <span>postfix</span>
-                  <span>bind</span>
-                  <span>apache</span>
-                  <span>nfs</span>
-                  <span>ldap</span>
-              </li>
-            <li><p>The Operating System Linux</p>
-                  <span>gnu tools</span>
-                  <span>file system</span>
-                  <span>file permissions</span>
-                  <span>pipes</span>
-                  <span>regular expressions</span>
-              </li>
-            <li><p>Programming in Linux</p>
-                  <span>Compiling</span>
-                  <span>shell scripting</span>
-                  <span>perl</span>
-                  <span>python</span>
-                  <span>bash</span>
-                  <span>monitoring</span>
-              </li>
-            <li><p>System Administration Linux</p>
-                  <span>user management</span>
-                  <span>logging</span>
-                  <span>backup</span>
-                  <span>kernel modules</span>
-                  <span>virtualization</span>
-                  <span>storage solution</span>
-              </li>
-            <li><p>Web server administration</p>
-                  <span>virtual hosts</span>
-                  <span>server side includes</span>
-                  <span>cgi-scripts</span>
-                  <span>ssl</span>
-                  <span>logging</span>
-              </li>
+      <div class="education">
+        <input id="education-item-1" type="checkbox" class="toggle-item"/>
+        <label for="education-item-1"></label>
+
+        <header class="subsection">
+          <div class="position">Structured Programming with C++</div>
+          <div class="company pipe">Linnaeus University</div>
+          <div class="date">
+            <span class="startDate">2009</span>
+            <span class="endDate"> - 2010</span>
+          </div>
+          <div class="website">
+            <a target="_blank" href="https://lnu.se/en/course/structured-programming-with-c-1dv533/distance-international-part-time-autumn/">https://lnu.se/</a>
+          </div>
+        </header>
+
+        <ul class="keywords">
+          <li>c++</li>
+          <li>boost</li>
+          <li>classes</li>
+          <li>data structures</li>
         </ul>
+
+        <div class="description">
+          <div class="summary">
+            <p>
+              The aim of the course is for the student to acquire knowledge and develop basic skills in structured programming with C++.
+              This includes, writing different data types, data structures, functions, as well as understanding how to manage dynamically
+              allocated memory and analyze programming tasks in order to evaluate and select a suitable design and, based on this, implement
+              a well­functioning solution.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="education">
+        <input id="education-item-2" type="checkbox" class="toggle-item"/>
+        <label for="education-item-2"></label>
+
+        <header class="subsection">
+          <div class="position">Linux System Administration</div>
+          <div class="company pipe">Jensen</div>
+          <div class="date">
+            <span class="startDate">2007</span>
+            <span class="endDate"> - 2009</span>
+          </div>
+          <div class="website">
+            <a target="_blank" href="https://www.jensenyh.se/">https://www.jensenyh.se/</a>
+          </div>
+        </header>
+
+        <ul class="keywords">
+          <li>linux</li>
+          <li>shell</li>
+          <li>python</li>
+          <li>kernel</li>
+          <li>apache</li>
+        </ul>
+
+        <div class="description">
+          <div class="summary">
+            <p>The operating system Linux</p></li>
+            <ul class="keywords">
+              <li>gnu tools</li>
+              <li>file system</li>
+              <li>file permissions</li>
+              <li>inetd</li>
+              <li>monitoring</li>
+              <li>pipes</li>
+            </ul>
+
+            <p>System administration Linux</p>
+            <ul class="keywords">
+              <li>backup</li>
+              <li>groups</li>
+              <li>kernel</li>
+              <li>logging</li>
+              <li>storage</li>
+              <li>users</li>
+              <li>virtualization</li>
+            </ul>
+
+            <p>Programming in Linux</p>
+            <ul class="keywords">
+              <li>compiling</li>
+              <li>shell scripting</li>
+              <li>perl</li>
+              <li>python</li>
+              <li>regular expressions</li>
+            </ul>
+
+            <p>Web server administration</p>
+            <ul class="keywords">
+              <li>virtual hosts</li>
+              <li>server side includes</li>
+              <li>cgi-scripts</li>
+              <li>tls</li>
+              <li>logging</li>
+            </ul>
+
+            <p>Network and communicationn</p>
+            <ul class="keywords">
+              <li>xinetd</li>
+              <li>postfix</li>
+              <li>bind</li>
+              <li>apache</li>
+              <li>nfs</li>
+              <li>ldap</li>
+            </ul>
+
+            <p>Database administration</p>
+            <ul class="keywords">
+              <li>relational database theory</li>
+              <li>normalization</li>
+              <li>database modelling</li>
+              <li>troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
-  </section>
+  </div>
+</section>
+
+<section class="section download">
+  <div class="container">
+    <p>Psst, click <a href="https://www.redlin.se/cv/Patrik%20Martinsson.pdf">here </a>to download a pdf version.</p>
+  </div>
 </section>
 </div>
 
-<footer class="footer fix-footer-padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="footer-manu">
-					<ul>
-            
-					</ul>
-				</div>
-				<p class="copyright">Copyright © 2020 <a href="https://www.redlin.se">RedLin PM AB</a> All Rights Reserved</p>
-			</div>
-		</div>
-	</div>
-</footer>
-
-
-
-	
-	
-
-
-
-
-<script defer src="https://www.redlin.se/plugins/jQuery/jquery.min.js"></script>
-
-<script defer src="https://www.redlin.se/plugins/bootstrap/bootstrap.min.js"></script>
-
-<script defer src="https://www.redlin.se/plugins/slick/slick.min.js"></script>
-
-<script defer src="https://www.redlin.se/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-<script defer src="https://www.redlin.se/plugins/shuffle/shuffle.min.js"></script>
-
-<script defer src="https://www.redlin.se/plugins/google-map/gmap.js"></script>
-
-
-
-
-<script defer src="https://www.redlin.se/js/script.min.js"></script>
-
-
-
+<!-- Footer -->
+<div class="footer">
+  <p>Copyright © 2020 <a href="https://www.redlin.se">RedLin PM AB</a> All Rights Reserved</p>
+</div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66076198-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -651,5 +665,4 @@
   gtag('config', 'UA-66076198-2');
 </script>
 </body>
-
 </html>

@@ -111,9 +111,10 @@
 <p>RedLin is founded and owned by <a href='https://www.linkedin.com/in/patrikmartinsson/' target='_blank' rel='noreferrer'> Patrik Martinsson</a> who has been in love with Red Hat for over a decade. During that time he has helped (as an employee) both governments and private companies to standardize and develop their infrastructure with the help of Linux and Red Hat products.</p>
 
       </div>
-      <div class="image">
-        <img loading="lazy" width="460"  src="/images/home/about.webp" class="img-responsive fix-general-image-border-radius" alt="">
-      </div>
+      <picture class="image">
+        <source srcset="/images/home/about.webp" type="image/webp">
+        <img loading="lazy" width="460" src="/images/home/about.png" alt="about us">
+      </picture>
     </div>
   </section>
 
@@ -121,9 +122,10 @@
   <!-- Section automation -->
   <section class="section automation section--muted">
     <div class="container">
-     <div class="image">
-        <img loading="lazy" width="250" src="/images/home/automation.webp" class="fix-general-image-border-radius" alt="">
-      </div>
+      <picture class="image">
+        <source srcset="/images/home/automation.webp" type="image/webp">
+        <img loading="lazy" width="250" src="/images/home/automation.png" alt="automation">
+      </picture>
      <div class="text">
       <div class="section-title">
         <h2>We believe in automation</h2>
@@ -187,5 +189,32 @@
   ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+function check_webp_feature(feature, callback) {
+    var kTestImages = {
+        lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+        lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+        alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+        animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+    };
+    var img = new Image();
+    img.onload = function () {
+        var result = (img.width > 0) && (img.height > 0);
+        callback(feature, result);
+    };
+    img.onerror = function () {
+        callback(feature, false);
+    };
+    img.src = "data:image/webp;base64," + kTestImages[feature];
+}
+check_webp_feature('lossy', function (feature, supported) {
+    if (!supported) {
+      const x = document.getElementsByClassName("banner");
+      let   f = x[0].style.backgroundImage;
+      const r = f.replace("webp", "png");
+            f = x[0].style.backgroundImage = r;
+    }
+});
+</script>
 </body>
 </html>

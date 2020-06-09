@@ -171,13 +171,19 @@
       </div>
       <div class="image">
         <a href="#project-image">
-          <img src="/images/portfolio/other-barnkollen-an-android-application-for-parents.webp" alt="Barnkollen - An Android application for parents thumbnail">
+          <picture>
+            <source srcset="/images/portfolio/other-barnkollen-an-android-application-for-parents.webp" type="image/webp" alt="Barnkollen - An Android application for parents thumbnail">
+            <img src="/images/portfolio/other-barnkollen-an-android-application-for-parents.png" alt=".Title thumbnail">
+          </picture>
         <div class="overlay fix">
           <p><i class="fas fa-search-plus"></i></p>
         </div>
         </a>
         <a href="#_" class="image-overlay-fullscreen" id="project-image">
-          <img src="/images/portfolio/other-barnkollen-an-android-application-for-parents.webp" alt="Barnkollen - An Android application for parents fullscreen">
+          <picture>
+            <source srcset="/images/portfolio/other-barnkollen-an-android-application-for-parents.webp" type="image/webp" alt="Barnkollen - An Android application for parents fullscreen">
+            <img src="/images/portfolio/other-barnkollen-an-android-application-for-parents.png" alt=".Title fullscreen">
+          </picture>
         </a>
       </div>
     </div>
@@ -212,5 +218,32 @@ parent as well as for the kids.</p>
   ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+function check_webp_feature(feature, callback) {
+    var kTestImages = {
+        lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+        lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+        alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+        animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+    };
+    var img = new Image();
+    img.onload = function () {
+        var result = (img.width > 0) && (img.height > 0);
+        callback(feature, result);
+    };
+    img.onerror = function () {
+        callback(feature, false);
+    };
+    img.src = "data:image/webp;base64," + kTestImages[feature];
+}
+check_webp_feature('lossy', function (feature, supported) {
+    if (!supported) {
+      const x = document.getElementsByClassName("banner");
+      let   f = x[0].style.backgroundImage;
+      const r = f.replace("webp", "png");
+            f = x[0].style.backgroundImage = r;
+    }
+});
+</script>
 </body>
 </html>

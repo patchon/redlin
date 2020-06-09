@@ -154,9 +154,10 @@
       </div>
     </div>
   </div>
-  <div class="image me">
-    <img class="picture" src="https://www.redlin.se/images/contact/patrik.webp" alt="Patrik Martinsson" />
-  </div>
+  <picture class="image me">
+    <source class="picture" srcset="/images/contact/patrik.webp" type="image/webp" alt="Patrik Martinsson founder">
+    <img class="picture" src="/images/contact/patrik.png" alt="Patrik Martinsson founder">
+  </picture>
 </section>
 
 <section class="section summary section--muted">
@@ -678,5 +679,32 @@
   ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+function check_webp_feature(feature, callback) {
+    var kTestImages = {
+        lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+        lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+        alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+        animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+    };
+    var img = new Image();
+    img.onload = function () {
+        var result = (img.width > 0) && (img.height > 0);
+        callback(feature, result);
+    };
+    img.onerror = function () {
+        callback(feature, false);
+    };
+    img.src = "data:image/webp;base64," + kTestImages[feature];
+}
+check_webp_feature('lossy', function (feature, supported) {
+    if (!supported) {
+      const x = document.getElementsByClassName("banner");
+      let   f = x[0].style.backgroundImage;
+      const r = f.replace("webp", "png");
+            f = x[0].style.backgroundImage = r;
+    }
+});
+</script>
 </body>
 </html>

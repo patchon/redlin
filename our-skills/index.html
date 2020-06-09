@@ -112,9 +112,10 @@
 <p>On top of all that, we believe in well executed processes, routines, and standardized system overviews to maintain structure and order.</p>
 
       </div>
-      <div class="image">
-        <img loading="lazy" width="460" src="https://www.redlin.se/images/our-skills/standardization.webp" alt="automation">
-      </div>
+      <picture class="image">
+        <source srcset="/images/our-skills/standardization.webp" type="image/webp">
+        <img loading="lazy" width="460" src="/images/our-skills/standardization.png" alt="automation">
+      </picture>
     </div>
   </section>
 
@@ -122,9 +123,10 @@
   <!-- Skills we know -->
   <section class="section skills-we-know section--muted">
     <div class="container">
-      <div class="image">
-        <img loading="lazy" width="460" src="https://www.redlin.se/images/our-skills/skill-set.webp" alt="skills">
-      </div>
+      <picture class="image">
+        <source srcset="/images/our-skills/skill-set.webp" type="image/webp">
+        <img loading="lazy" width="460" src="/images/our-skills/skill-set.png" alt="skills">
+      </picture>
       <div class="text">
         <div class="section-title">
           <h2>Skills that we take pride in <u>knowing</u></h2>
@@ -178,9 +180,10 @@
           <li class="skill-list-item">Discord</li>
         </ul>
       </div>
-      <div class="image">
-        <img loading="lazy" width="460" src="https://www.redlin.se/images/our-skills/integration.webp" alt="api integration">
-      </div>
+      <picture class="image">
+        <source srcset="/images/our-skills/integration.webp" type="image/webp">
+          <img loading="lazy" width="460" src="/images/our-skills/integration.png" alt="api integration">
+      </picture>
     </div>
   </section></div>
 
@@ -194,5 +197,32 @@
   ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+function check_webp_feature(feature, callback) {
+    var kTestImages = {
+        lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+        lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+        alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+        animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+    };
+    var img = new Image();
+    img.onload = function () {
+        var result = (img.width > 0) && (img.height > 0);
+        callback(feature, result);
+    };
+    img.onerror = function () {
+        callback(feature, false);
+    };
+    img.src = "data:image/webp;base64," + kTestImages[feature];
+}
+check_webp_feature('lossy', function (feature, supported) {
+    if (!supported) {
+      const x = document.getElementsByClassName("banner");
+      let   f = x[0].style.backgroundImage;
+      const r = f.replace("webp", "png");
+            f = x[0].style.backgroundImage = r;
+    }
+});
+</script>
 </body>
 </html>

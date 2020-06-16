@@ -1,0 +1,6 @@
+[branch "beta"]
+  remote = beta
+  merge = refs/heads/master
+[remote "beta"]
+  url = git@github.com:patchon/redlin.se-beta.git
+  fetch = +refs/heads/*:refs/remotes/beta/*

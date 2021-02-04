@@ -4,11 +4,7 @@
     <title>Our Portfolio on RedLin PM AB | Your Red Hat Linux Expert</title>
     <link>https://www.redlin.se/portfolio/</link>
     <description>Recent content in Our Portfolio on RedLin PM AB | Your Red Hat Linux Expert</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="https://www.redlin.se/portfolio/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://www.redlin.se/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Barnkollen - An Android application for parents</title>
       <link>https://www.redlin.se/portfolio/other-barnkollen-an-android-application-for-parents/</link>

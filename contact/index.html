@@ -141,7 +141,7 @@
     <div id="thank-you-message">
       Thanks for the email, we'll be in touch!
     </div>
-    <form id="form" onsubmit="return handle_submit();" method="POST" action="https://formspree.io/xaydgpnq" target="hidden" target="hidden">
+    <form id="form" onsubmit="return handle_submit(event);" method="POST" action="https://formspree.io/xaydgpnq" target="hidden" data-confirm="Are you sure you want to submit the form ?">
       <div class="form-group first">
         <input id="name" name="name" type="text" class="form-control" placeholder="Your Name" required>
         <label for="name">Name</label>
@@ -164,7 +164,12 @@
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-  async function handle_submit(){
+  async function handle_submit(e){
+    if(!confirm(document.getElementById("form").dataset.confirm)){
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      }else{
+
 
     const e = document.getElementById("thank-you-message");
     const f = document.getElementById("form");
@@ -174,6 +179,7 @@
     e.style.maxHeight = "none";
     e.style.opacity   = "1";
     f.style.display   = "none"
+        }
   }
 </script>
 </div>

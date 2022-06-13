@@ -169,64 +169,12 @@
   }
 </style>
 <script src="https://www.google.com/recaptcha/api.js?render=6LdWDTAeAAAAAIJ1DAbhbMk-QSmg6GOEJxiYo2fs"></script>
-
-
-
 <script>
-grecaptcha.ready(function () {
-              grecaptcha.execute('6LdWDTAeAAAAAIJ1DAbhbMk-QSmg6GOEJxiYo2fs', {action: 'submit'}).then(function (token) {
-                  console.info("got token: " + token);
-                  document.getElementById('g-recaptcha-response').value = token;
-              });
-          });
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LdWDTAeAAAAAIJ1DAbhbMk-QSmg6GOEJxiYo2fs', {action: 'submit'}).then(function (token) {
+      document.getElementById('g-recaptcha-response').value = token;
+    });
+  });
 
   async function handle_submit(e) {
 

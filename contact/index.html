@@ -142,6 +142,7 @@
       Thanks for the email, we'll be in touch!
     </div>
     <form id="form" onsubmit="return handle_submit(event);" method="POST" action="https://formspree.io/xaydgpnq" target="hidden" data-confirm="Are you sure you want to submit the form ?">
+      <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
       <div id='recaptcha' class="g-recaptcha"
         data-sitekey="6LdWDTAeAAAAAIJ1DAbhbMk-QSmg6GOEJxiYo2fs"
         data-callback="onSubmit"
@@ -172,6 +173,13 @@
 
 
 <script>
+grecaptcha.ready(function () {
+              grecaptcha.execute('6LdWDTAeAAAAAIJ1DAbhbMk-QSmg6GOEJxiYo2fs', {action: 'submit'}).then(function (token) {
+                  console.info("got token: " + token);
+                  document.getElementById('g-recaptcha-response').value = token;
+              });
+          });
+
   
 
 
@@ -226,31 +234,29 @@
       e.stopImmediatePropagation();
       e.preventDefault();
     } else {
-      var p = {}
-      var data = new FormData();
-      p['name']     = document.getElementById('name').value;
-      p['email']    = document.getElementById('email').value;
-      p['subject']  = document.getElementById('subject').value;
-      data.append( "json", JSON.stringify(p));
+     
+     
+     
+     
+     
+     
 
-      fetch("https://formspree.io/xaydgpnq", {
-        method: "POST",
-        headers: {'Content-Type': 'application/json'},
-        body: (data)
-      }).then(res => {
-        const a = document.getElementById("thank-you-message");
-        const b = document.getElementById("form");
-       sleep(1000).then(() => {
-         a.style.maxWidth = "none";
-         a.style.maxHeight = "none";
-         a.style.opacity = "1";
-         b.style.display = "none"
-         console.log("Request complete! response:", res);
-       });
-
-      });
+     
+     
+     
+     
+     
+     const a = document.getElementById("thank-you-message");
+     const b = document.getElementById("form");
+     await sleep(1000)
+       a.style.maxWidth = "none";
+       a.style.maxHeight = "none";
+       a.style.opacity = "1";
+       b.style.display = "none"
+       console.log("Request complete! response:", e);
     }
   }
+
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }

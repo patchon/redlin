@@ -141,7 +141,7 @@
     <div id="thank-you-message">
       Thanks for the email, we'll be in touch!
     </div>
-    <form id="form" method="POST" action="https://formspree.io/xaydgpnq" target="hidden" data-confirm="Are you sure you want to submit the form ?">
+    <form id="form" onsubmit="return handle_submit(event);" method="POST" action="https://formspree.io/xaydgpnq" target="hidden" data-confirm="Are you sure you want to submit the form ?">
       <div id='recaptcha' class="g-recaptcha"
         data-sitekey="6LdWDTAeAAAAAIJ1DAbhbMk-QSmg6GOEJxiYo2fs"
         data-callback="onSubmit"
@@ -168,54 +168,57 @@
   }
 </style>
 <script src="https://www.google.com/recaptcha/api.js?render=6LdWDTAeAAAAAIJ1DAbhbMk-QSmg6GOEJxiYo2fs"></script>
+
+
+
 <script>
+  
 
-  var submitted = false;
-  var tokenCreated = false;
-  var formEl = document.getElementById('form');
 
-  formEl.addEventListener("submit", function (event) {
 
-    
-    if (!tokenCreated) {
 
-      
-      event.preventDefault();
-      console.log("here");
-      
-      if (!submitted) {
-        submitted = true;
-        
-        grecaptcha.ready(function() {
-          
-          
-          grecaptcha.execute('6LdWDTAeAAAAAIJ1DAbhbMk-QSmg6GOEJxiYo2fs', {action: 'create_comment'}).then(function (token) {
-            
-            var input = document.createElement("input");
-            input.type = "hidden";
-            input.name = "g-recaptcha-response";
-            input.value = token;
-            formEl.appendChild(input);
 
-            
-            tokenCreated = true;
-            formEl.submit();
-          });
-        });
-      }
-    }
 
-      const a = document.getElementById("thank-you-message");
-      const b = document.getElementById("form");
 
-      sleep(1000).then(() => {
-        a.style.maxWidth = "none";
-        a.style.maxHeight = "none";
-        a.style.opacity = "1";
-        b.style.display = "none"
-        console.log("hereadfaf");
-      });
-  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   async function handle_submit(e) {
 
@@ -223,15 +226,30 @@
       e.stopImmediatePropagation();
       e.preventDefault();
     } else {
+      var payload = {
+        name:     document.getElementById('name').value;,
+        email:    document.getElementById('email').value;,
+        subject:  document.getElementById('subject').value;,
+      };
 
-      const a = document.getElementById("thank-you-message");
-      const b = document.getElementById("form");
+      var data = new FormData();
+      data.append( "json", JSON.stringify( payload ) );
 
-      await sleep(1000);
-      a.style.maxWidth = "none";
-      a.style.maxHeight = "none";
-      a.style.opacity = "1";
-      b.style.display = "none"
+      fetch("https://formspree.io/xaydgpnq", {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: (data)
+      }).then(res => {
+        const a = document.getElementById("thank-you-message");
+        const b = document.getElementById("form");
+
+        await sleep(1000);
+        a.style.maxWidth = "none";
+        a.style.maxHeight = "none";
+        a.style.opacity = "1";
+        b.style.display = "none"
+        console.log("Request complete! response:", res);
+      });
     }
   }
   function sleep(ms) {

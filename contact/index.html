@@ -226,14 +226,12 @@
       e.stopImmediatePropagation();
       e.preventDefault();
     } else {
-      var payload = {
-        name:     document.getElementById('name').value;,
-        email:    document.getElementById('email').value;,
-        subject:  document.getElementById('subject').value;,
-      };
-
+      var p = {}
       var data = new FormData();
-      data.append( "json", JSON.stringify( payload ) );
+      p[name]     = document.getElementById('name').value;
+      p[email]    = document.getElementById('email').value;
+      p[subject]  = document.getElementById('subject').value;
+      data.append( "json", JSON.stringify(p));
 
       fetch("https://formspree.io/xaydgpnq", {
         method: "POST",

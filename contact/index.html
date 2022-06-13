@@ -228,9 +228,9 @@
     } else {
       var p = {}
       var data = new FormData();
-      p[name]     = document.getElementById('name').value;
-      p[email]    = document.getElementById('email').value;
-      p[subject]  = document.getElementById('subject').value;
+      p['name']     = document.getElementById('name').value;
+      p['email']    = document.getElementById('email').value;
+      p['subject']  = document.getElementById('subject').value;
       data.append( "json", JSON.stringify(p));
 
       fetch("https://formspree.io/xaydgpnq", {
@@ -240,13 +240,14 @@
       }).then(res => {
         const a = document.getElementById("thank-you-message");
         const b = document.getElementById("form");
+       sleep(1000).then(() => {
+         a.style.maxWidth = "none";
+         a.style.maxHeight = "none";
+         a.style.opacity = "1";
+         b.style.display = "none"
+         console.log("Request complete! response:", res);
+       });
 
-        await sleep(1000);
-        a.style.maxWidth = "none";
-        a.style.maxHeight = "none";
-        a.style.opacity = "1";
-        b.style.display = "none"
-        console.log("Request complete! response:", res);
       });
     }
   }

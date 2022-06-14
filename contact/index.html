@@ -37,7 +37,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-8JQNEV915');
+    gtag('config', "G-8JQNEV915B");
   </script>
 
   <!-- Mobile responsive meta -->
@@ -168,29 +168,15 @@
 <script>
   grecaptcha.ready(function () {
     grecaptcha.execute('6LdWDTAeAAAAAIJ1DAbhbMk-QSmg6GOEJxiYo2fs', { action: 'submit' }).then(function (token) {
-      console.log(token);
-      
+      document.getElementById('g-recaptcha-response').value = token;
     });
   });
 
   async function handle_submit(e) {
-
     if (!confirm(document.getElementById("form").dataset.confirm)) {
       e.stopImmediatePropagation();
       e.preventDefault();
     } else {
-      
-      
-      
-      
-      
-      
-
-      
-      
-      
-      
-      
       const a = document.getElementById("thank-you-message");
       const b = document.getElementById("form");
       await sleep(1000)

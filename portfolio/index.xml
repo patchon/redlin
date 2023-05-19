@@ -21,7 +21,7 @@
       
       <guid>https://www.redlin.se/portfolio/automation-complete-server-creation/</guid>
       <description>Automate the process of server creation This project involved the automation of all the necessary steps that were needed to create a server in the customers infrastructure. This involves,
- Aquire an IP address from Infoblox and create specified aliases (CNAME&amp;rsquo;s) Create a new instance in VMware with specified hardware (CPU / Memory / Disk) Attach the instance to the specified VLAN interface as well as the correct storage pool Boot the server and PXE-install it with the correct profile (this was done via PXE because of legacy reasons) Once the server was installed, puppet got in place and configured it accordingly The final step was to add the newly installed server to the monitoring system OP5 Monitor  This was achived with a lot of API-calls to the various infrastructure components.</description>
+Aquire an IP address from Infoblox and create specified aliases (CNAME&amp;rsquo;s) Create a new instance in VMware with specified hardware (CPU / Memory / Disk) Attach the instance to the specified VLAN interface as well as the correct storage pool Boot the server and PXE-install it with the correct profile (this was done via PXE because of legacy reasons) Once the server was installed, puppet got in place and configured it accordingly The final step was to add the newly installed server to the monitoring system OP5 Monitor This was achived with a lot of API-calls to the various infrastructure components.</description>
     </item>
     
     <item>
